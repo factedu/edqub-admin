@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "Job"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "from_date": {
+      "type": "date",
+      "required": true
+    },
+    "to_date": {
+      "type": "date"
+    },
+    "job_description": {
+      "type": "text"
+    },
+    "role": {
+      "type": "component",
+      "repeatable": true,
+      "component": "job.role"
+    }
+  }
+}
